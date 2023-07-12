@@ -12,20 +12,28 @@ export class DetailsComponent implements OnInit {
   companyId: number | undefined;
   company: Company | undefined;
 
-  constructor(private route: ActivatedRoute, private router: Router, private companyService: CompanyService) {}
+  constructor(private route: ActivatedRoute, private router: Router, private companyService: CompanyService) { }
 
   ngOnInit() {
     const idParam = this.route.snapshot.paramMap.get('id');
     if (idParam) {
       this.companyId = +idParam;
-      this.company = this.companyService.getSelectedCompany();
+      const selectedCompany = localStorage.getItem('selectedCompany');
+      if (selectedCompany) {
+        this.company = JSON.parse(selectedCompany);
+      } else {
+        this.company = this.companyService.getSelectedCompany();
+      }
     } else {
       console.log('Branch not available');
       alert('Branch not available');
-    }
+    } 
   }
+
 
   goBack() {
     this.router.navigate(['/filialen']);
   }
+
+
 }

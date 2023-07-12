@@ -5,5 +5,9 @@ export interface Company {
     plz: string;
     ort: string;
     kanton: string;
-    
+    email: string;
+    phone: string;
+    web: string;
+    contact: string;
+    img: string;
   }

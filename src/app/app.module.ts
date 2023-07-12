@@ -6,17 +6,22 @@ import { AppComponent } from './app.component';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { DetailsComponent } from './details/details.component';
 import { RouterModule, Routes } from '@angular/router';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { FormComponent } from './form/form.component'
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CompanyListComponent,
-    DetailsComponent
+    DetailsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

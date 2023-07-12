@@ -1,5 +1,8 @@
 .company-details {
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
 }
 
 .back-btn {
@@ -8,4 +11,12 @@
     border-style: none;
     font-weight: bold;
     cursor:pointer;
+}
+
+.img{
+    max-width: 50%;  
+    height: auto;
+    align-self: flex-end;
+    margin-left: 2rem;  
+    margin-top: 1.2rem;
 }
