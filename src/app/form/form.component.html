@@ -1,1 +1,43 @@
-<p>form works!</p>
+<form (submit)="onSubmit()">
+  <div>
+    <label for="sortiment">Sortiment:</label>
+    <input type="text" id="sortiment" [(ngModel)]="formData.sortiment" name="sortiment" required>
+  </div>
+  <div>
+    <label for="firma">Firma:</label>
+    <input type="text" id="firma" [(ngModel)]="formData.firma" name="firma" required>
+  </div>
+  <div>
+    <label for="plz">PLZ:</label>
+    <input type="text" id="plz" [(ngModel)]="formData.plz" name="plz" required>
+  </div>
+  <div>
+    <label for="ort">Ort:</label>
+    <input type="text" id="ort" [(ngModel)]="formData.ort" name="ort" required>
+  </div>
+  <div>
+    <label for="kanton">Kanton:</label>
+    <input type="text" id="kanton" [(ngModel)]="formData.kanton" name="kanton" required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="formData.email" name="email" required>
+  </div>
+  <div>
+    <label for="web">Web:</label>
+    <input type="text" id="web" [(ngModel)]="formData.web" name="web" required>
+  </div>
+  <div>
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" [(ngModel)]="formData.phone" name="phone" required>
+  </div>
+  <div>
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" [(ngModel)]="formData.contact" name="contact" required>
+  </div>
+  <div>
+    <label for="img">Image URL:</label>
+    <input type="text" id="img" [(ngModel)]="formData.img" name="img" required>
+  </div>
+  <button type="submit">Submit</button>
+</form>

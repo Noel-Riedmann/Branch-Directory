@@ -1,0 +1,44 @@
+<h2>Edit Company</h2>
+<form *ngIf="company" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="sortiment">Sortiment:</label>
+    <input type="text" id="sortiment" [(ngModel)]="company.sortiment" name="sortiment" required>
+  </div>
+  <div>
+    <label for="firma">Firma:</label>
+    <input type="text" id="firma" [(ngModel)]="company.firma" name="firma" required>
+  </div>
+  <div>
+    <label for="plz">PLZ:</label>
+    <input type="text" id="plz" [(ngModel)]="company.plz" name="plz" required>
+  </div>
+  <div>
+    <label for="ort">Ort:</label>
+    <input type="text" id="ort" [(ngModel)]="company.ort" name="ort" required>
+  </div>
+  <div>
+    <label for="kanton">Kanton:</label>
+    <input type="text" id="kanton" [(ngModel)]="company.kanton" name="kanton" required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="company.email" name="email" required>
+  </div>
+  <div>
+    <label for="web">Web:</label>
+    <input type="text" id="web" [(ngModel)]="company.web" name="web" required>
+  </div>
+  <div>
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" [(ngModel)]="company.phone" name="phone" required>
+  </div>
+  <div>
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" [(ngModel)]="company.contact" name="contact" required>
+  </div>
+  <div>
+    <label for="img">Image URL:</label>
+    <input type="text" id="img" [(ngModel)]="company.img" name="img" required>
+  </div>
+  <button type="submit">Save</button>
+</form>

@@ -2,6 +2,7 @@
     <h2>Unsere Filialen</h2>
     <p>Hier kommt etwas Text... unsere Produkte gibt es natürlich auch im Fachhandel. Hier finden Sie Verkaufsstellen in Ihrer Nähe.</p>
   </div>
+  <button class="addbtn" (click)="addBranche()">Filiale hinzufügen</button>
   
   <table>
     <thead class="listheaderparent">
@@ -12,6 +13,7 @@
               <th class="ort">Ort</th>
               <th class="kan">Kanton</th>
               <th class="details">Details</th>
+              
           </tr>
     </thead>
     <tbody>
@@ -24,6 +26,7 @@
         <td class="details">
           <button class="detailbtn" (click)="showDetails(company)">Details anzeigen</button>
         </td>
+        <button (click)="editCompany(company)">Edit</button>
       </tr>
     </tbody>
   </table>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CompanyService } from '../company.service';
 
 @Component({
   selector: 'app-form',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
+  formData: any = {};
 
+  constructor(private companyService: CompanyService) {}
+
+  onSubmit() {
+    this.companyService.addCompany(this.formData);
+    this.formData = {};
+  }
 }
