@@ -8,7 +8,7 @@ export class CompanyService {
   private selectedCompany: Company | undefined;
   private companies: Company[] = [];
   private storageKey = 'companies';
-  private currentId = 99;
+  private currentId = 0;
 
   constructor() {
     this.loadCompaniesFromStorage();

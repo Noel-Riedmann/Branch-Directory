@@ -30,7 +30,7 @@ export class CompanyListComponent implements OnInit {
   editCompany(company: Company) {
     this.companyService.setSelectedCompany(company);
     this.router.navigate(['filialen/edit', company.id]); 
-    alert(company.id);
+    console.log("Company id:", company.id)
   }
   
   

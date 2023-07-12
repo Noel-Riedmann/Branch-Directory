@@ -27,8 +27,12 @@ export class EditCompanyComponent implements OnInit {
   onSubmit() {
     if (this.company) {
       this.companyService.updateCompany(this.company);
-      this.router.navigate(['filialen/details', this.company.id]);
+      this.router.navigate(['filialen']);
     }
+  }
+
+  back(){
+    this.router.navigate(['filialen']);
   }
 }
 
