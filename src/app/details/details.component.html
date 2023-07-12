@@ -1,0 +1,7 @@
+<div class="company-details" *ngIf="company">
+    <h3>Unsere Firma in {{ company.ort }}</h3>
+    <p>{{ company.firma }}</p>
+    <p>Straße</p>
+    <p>{{ company.plz }} {{ company.ort }}</p>
+    <button class="back-btn" (click)="goBack()">&lt; Zurück zur Übersicht</button>
+</div>

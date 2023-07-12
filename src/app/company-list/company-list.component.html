@@ -1,0 +1,30 @@
+<div  class="body">
+    <h2>Unsere Filialen</h2>
+    <p>Hier kommt etwas Text... unsere Produkte gibt es natürlich auch im Fachhandel. Hier finden Sie Verkaufsstellen in Ihrer Nähe.</p>
+  </div>
+  
+  <table>
+    <thead class="listheaderparent">
+      <tr class="tr">
+              <th class="srt">Sortiment</th>
+              <th class="fir">Firma</th>
+              <th class="plz">PLZ</th>
+              <th class="ort">Ort</th>
+              <th class="kan">Kanton</th>
+              <th class="details">Details</th>
+          </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let company of companies">
+        <td class="srt">{{ company.sortiment }}</td>
+              <td class="fir">{{ company.firma }}</td>
+              <td class="plz">{{ company.plz }}</td>
+              <td class="ort">{{ company.ort }}</td>
+              <td class="kan">{{ company.kanton }}</td>
+        <td class="details">
+          <button class="detailbtn" (click)="showDetails(company)">Details anzeigen</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

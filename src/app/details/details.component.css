@@ -1,0 +1,11 @@
+.company-details {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.back-btn {
+    background: none;
+    font-family: 'Courier New', Courier, monospace;
+    border-style: none;
+    font-weight: bold;
+    cursor:pointer;
+}
