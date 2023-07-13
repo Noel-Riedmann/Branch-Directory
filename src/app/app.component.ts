@@ -20,4 +20,8 @@ export class AppComponent {
     window.open('https://www.2sic.com');
     console.log('logo has been pressed')
   }
+
+  mattable(){
+    this.router.navigate(['filialen/materialtable'])
+  }
 }

@@ -10,6 +10,14 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { FormComponent } from './form/form.component'
 import { FormsModule } from '@angular/forms';
 import { EditCompanyComponent } from './edit-company-component/edit-company-component.component';
+import { MaterialtableComponent } from './materialtable/materialtable.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MapComponent } from './map/map.component';
+
 
 
 
@@ -19,14 +27,21 @@ import { EditCompanyComponent } from './edit-company-component/edit-company-comp
     CompanyListComponent,
     DetailsComponent,
     FormComponent,
-    EditCompanyComponent
+    EditCompanyComponent,
+    MaterialtableComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GoogleMapsModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatButtonToggleModule,
+    GoogleMapsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

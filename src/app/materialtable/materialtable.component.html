@@ -1,0 +1,45 @@
+<h2>Unsere Filialen</h2>
+<p>Hier kommt etwas Text... unsere Produkte gibt es natürlich auch im Fachhandel. Hier finden Sie Verkaufsstellen in Ihrer Nähe.</p>
+
+<mat-button-toggle-group name="displaymode" class="displaybtngroup">
+  <mat-button-toggle value="table" class="displaybtn" routerLinkActive="active-link" [routerLink]="'/filialen/materialtable'">Tabelle</mat-button-toggle>
+  <mat-button-toggle value="map" class="displaybtn" routerLinkActive="active-link" [routerLink]="'/filialen/map'">Map</mat-button-toggle>
+</mat-button-toggle-group>
+<table mat-table [dataSource]="companies">
+
+  <ng-container matColumnDef="sortiment">
+    <th mat-header-cell *matHeaderCellDef> Sortiment </th>
+    <td mat-cell *matCellDef="let company"> {{ company.sortiment }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="firma">
+    <th mat-header-cell *matHeaderCellDef> Firma </th>
+    <td mat-cell *matCellDef="let company"> {{ company.firma }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="plz">
+    <th mat-header-cell *matHeaderCellDef> PLZ </th>
+    <td mat-cell *matCellDef="let company"> {{ company.plz }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ort">
+    <th mat-header-cell *matHeaderCellDef> Ort </th>
+    <td mat-cell *matCellDef="let company"> {{ company.ort }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="kanton">
+    <th mat-header-cell *matHeaderCellDef> Kanton </th>
+    <td mat-cell *matCellDef="let company"> {{ company.kanton }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="details">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let company">
+      <a [routerLink]="['/filialen/details', company.id]">Details anzeigen</a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let company; columns: displayedColumns;"></tr>
+
+</table>

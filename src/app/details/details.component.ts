@@ -27,12 +27,12 @@ export class DetailsComponent implements OnInit {
     } else {
       console.log('Branch not available');
       alert('Branch not available');
-    } 
+    }
   }
 
 
   goBack() {
-    this.router.navigate(['/filialen']);
+    this.router.navigate(['/filialen/materialtable']);
   }
 
 

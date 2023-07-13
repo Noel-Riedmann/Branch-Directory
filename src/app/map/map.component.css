@@ -1,0 +1,29 @@
+.displaybtngroup {
+  right: 1rem;
+  position: absolute;
+  top: 6rem;
+}
+
+.displaybtn:hover {
+  background-color: gainsboro;
+}
+
+.active-link {
+  background-color: #e0e0e0;
+}
+
+h2,
+p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.custom-map {
+  height: 400px;
+  width: 100%;
+}
+
+
+
+
+

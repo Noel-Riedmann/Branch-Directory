@@ -1,0 +1,10 @@
+<h2>Unsere Filialen</h2>
+<p>Hier kommt etwas Text... unsere Produkte gibt es natürlich auch im Fachhandel. Hier finden Sie Verkaufsstellen in Ihrer Nähe.</p>
+
+<mat-button-toggle-group name="displaymode" class="displaybtngroup">
+  <mat-button-toggle value="table" class="displaybtn" routerLinkActive="active-link" [routerLink]="'/filialen/materialtable'">Tabelle</mat-button-toggle>
+  <mat-button-toggle value="map" class="displaybtn" routerLinkActive="active-link" [routerLink]="'/filialen/map'">Map</mat-button-toggle>
+</mat-button-toggle-group>
+<google-map [center]="center" [zoom]="zoom" class="custom-map" width="100%" height="80%">
+  <map-marker *ngFor="let position of markerPositions" [position]="position"></map-marker>
+</google-map>
