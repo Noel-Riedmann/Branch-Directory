@@ -18,8 +18,9 @@ p {
   padding-right: 2rem;
 }
 
-.custom-map {
-  height: 400px;
+
+.map-parent{
+  margin: 2rem;
   width: 100%;
 }
 

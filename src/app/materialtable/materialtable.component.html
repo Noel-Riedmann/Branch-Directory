@@ -35,7 +35,9 @@
   <ng-container matColumnDef="details">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let company">
-      <a [routerLink]="['/filialen/details', company.id]">Details anzeigen</a>
+     <a [routerLink]="['/filialen/details', company.id]">Details anzeigen</a>
+     <button class="detailbtn" (click)="showDetails(company)">Details anzeigen</button>
+
     </td>
   </ng-container>
 

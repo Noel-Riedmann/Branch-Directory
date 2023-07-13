@@ -10,4 +10,6 @@ export interface Company {
     web: string;
     contact: string;
     img: string;
+    lat: number;
+    lng: number;
   }

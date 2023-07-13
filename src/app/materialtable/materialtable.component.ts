@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Company } from './models';
 import { CompanyService } from '../company.service';
 import { Router } from '@angular/router';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @Component({
   selector: 'app-materialtable',

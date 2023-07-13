@@ -1,7 +1,7 @@
 .company-details {
     font-family: 'Courier New', Courier, monospace;
     display: flex;
-    margin: 10px;
+    margin: 2rem;
     padding: 10px;
 }
 
@@ -11,12 +11,17 @@
     border-style: none;
     font-weight: bold;
     cursor:pointer;
+    margin: 2rem;
 }
 
 .img{
-    max-width: 50%;  
+    max-width: 50%;
     height: auto;
     align-self: flex-end;
-    margin-left: 2rem;  
+    margin-left: 2rem;
     margin-top: 1.2rem;
+}
+
+.map-parent{
+  margin-left: 2rem;
 }

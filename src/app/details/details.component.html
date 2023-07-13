@@ -9,4 +9,10 @@
         <img class="img" src="{{ company.img }}" alt="Bild von {{company.firma}}">
     </div>
 </div>
+<div class="map-parent">
+  <google-map [options]="options" [center]="center" [zoom]="zoom" class="custom-map" width="60%" height="30rem">
+    <map-marker *ngFor="let position of markerPositions" [position]="position"></map-marker>
+  </google-map>
+</div>
+
 <button class="back-btn" (click)="goBack()">&lt; Zurück zur Übersicht</button>

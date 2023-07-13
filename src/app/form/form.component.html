@@ -41,6 +41,15 @@
       <label for="img">Image URL:</label>
       <input type="text" id="img" [(ngModel)]="formData.img" name="img" required>
     </div>
+    <div class="location">
+      <div class="lat">
+        <label for="lat">Koordinaten</label>
+        <input placeholder="Breitengrad" class="locinputlng" type="number" id="lat" [(ngModel)]="formData.lat" name="lat" required>
+      </div>
+      <div class="lng">
+        <input placeholder="Längengrad" class="locinputlat" type="number" id="lng" [(ngModel)]="formData.lng" name="lng" required>
+      </div>
+    </div>
   </div>
   <div class="btnparent">
     <button type="submit">speichern</button>
