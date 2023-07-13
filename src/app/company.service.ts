@@ -75,5 +75,12 @@ export class CompanyService {
       this.companies[index] = updatedCompany;
     }
   }
+  deleteCompany(companyId: number): void {
+    const index = this.companies.findIndex(company => company.id === companyId);
+    if (index !== -1) {
+      this.companies.splice(index, 1);
+      this.saveCompaniesToStorage();
+    }
+  }
 }
 

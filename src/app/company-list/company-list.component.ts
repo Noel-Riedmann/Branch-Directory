@@ -32,6 +32,11 @@ export class CompanyListComponent implements OnInit {
     this.router.navigate(['filialen/edit', company.id]); 
     console.log("Company id:", company.id)
   }
+
+  deleteCompany(company: Company){
+    this.companyService.setSelectedCompany(company);
+    this.companyService.deleteCompany(company.id);
+  }
   
   
 }
