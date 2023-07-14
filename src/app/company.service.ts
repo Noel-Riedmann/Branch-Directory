@@ -5,10 +5,9 @@ import { Company } from './company-list/models';
   providedIn: 'root'
 })
 export class CompanyService {
-  private selectedCompany: Company | undefined;
-  private companies: Company[] = [];
   private storageKey = 'companies';
   private currentId: number = 100;
+  private companies: Company[] = [];
 
   constructor() {
     this.loadCompaniesFromStorage();
@@ -65,8 +64,10 @@ export class CompanyService {
     const index = this.companies.findIndex(company => company.id === updatedCompany.id);
     if (index !== -1) {
       this.companies[index] = updatedCompany;
+      this.saveCompaniesToStorage();
     }
   }
+
   deleteCompany(companyId: number): void {
     const index = this.companies.findIndex(company => company.id === companyId);
     if (index !== -1) {
@@ -75,4 +76,3 @@ export class CompanyService {
     }
   }
 }
-

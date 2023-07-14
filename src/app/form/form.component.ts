@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CompanyService } from '../company.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -8,13 +9,30 @@ import { CompanyService } from '../company.service';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  formData: any = {};
+  form: FormGroup;
 
   constructor(
     private companyService: CompanyService,
     private route: ActivatedRoute,
-    private router: Router
-  ) {}
+    private router: Router,
+    private formBuilder: FormBuilder
+  ) {
+    this.form = this.formBuilder.group({
+      id: [''],
+      sortiment: ['', Validators.required],
+      firma: ['', Validators.required],
+      plz: ['', Validators.required],
+      ort: ['', Validators.required],
+      kanton: ['', Validators.required],
+      email: ['', Validators.required],
+      web: ['', Validators.required],
+      phone: ['', Validators.required],
+      contact: ['', Validators.required],
+      img: ['', Validators.required],
+      lat: ['', Validators.required],
+      lng: ['', Validators.required]
+    });
+  }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -22,24 +40,22 @@ export class FormComponent implements OnInit {
       if (companyId) {
         const company = this.companyService.getCompanyById(companyId);
         if (company) {
-          this.formData = { ...company };
+          this.form.patchValue(company);
         }
       }
     });
   }
 
   onSubmit() {
-    if (this.formData) {
-      if (this.formData.id) {
-        this.companyService.updateCompany(this.formData);
+    if (this.form.valid) {
+      const formValue = this.form.value;
+      if (formValue.id) {
+        this.companyService.updateCompany(formValue);
       } else {
-        this.companyService.addCompany(this.formData);
+        this.companyService.addCompany(formValue);
       }
-      this.formData = {};
+      this.form.reset();
+      this.router.navigate(['filialen']);
     }
-  }
-
-  back() {
-    this.router.navigate(['filialen']);
   }
 }

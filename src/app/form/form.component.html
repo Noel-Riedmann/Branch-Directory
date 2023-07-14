@@ -1,61 +1,116 @@
 <h2>Filiale hinzufügen</h2>
-<form (submit)="onSubmit()">
-  <input type="hidden" id="id" [(ngModel)]="formData.id" name="id">
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input type="hidden" formControlName="id">
+
   <div class="parent">
     <div class="subparent">
-      <label for="sortiment">Sortiment:</label>
-      <input type="text" id="sortiment" [(ngModel)]="formData.sortiment" name="sortiment" required>
+      <mat-form-field>
+        <mat-label>Sortiment:</mat-label>
+        <input matInput formControlName="sortiment" required>
+      </mat-form-field>
     </div>
     <div class="subparent">
-      <label for="firma">Firma:</label>
-      <input type="text" id="firma" [(ngModel)]="formData.firma" name="firma" required>
+      <mat-form-field>
+        <mat-label>Firma:</mat-label>
+        <input matInput formControlName="firma" required>
+      </mat-form-field>
     </div>
     <div class="subparent">
-      <label for="plz">PLZ:</label>
-      <input type="text" id="plz" [(ngModel)]="formData.plz" name="plz" required>
+      <mat-form-field>
+        <mat-label>PLZ:</mat-label>
+        <input matInput formControlName="plz" required>
+      </mat-form-field>
     </div>
     <div class="subparent">
-      <label for="ort">Ort:</label>
-      <input type="text" id="ort" [(ngModel)]="formData.ort" name="ort" required>
+      <mat-form-field>
+        <mat-label>Ort:</mat-label>
+        <input matInput formControlName="ort" required>
+      </mat-form-field>
     </div>
     <div class="subparent">
-      <label for="kanton">Kanton:</label>
-      <input type="text" id="kanton" [(ngModel)]="formData.kanton" name="kanton" required>
+      <mat-form-field>
+        <mat-label>Kanton:</mat-label>
+        <mat-select formControlName="kanton" required>
+          <mat-option value="VB (AT)">VB (AT)</mat-option>
+          <mat-option value="AG">AG</mat-option>
+          <mat-option value="AI">AI</mat-option>
+          <mat-option value="AR">AR</mat-option>
+          <mat-option value="BE">BE</mat-option>
+          <mat-option value="BL">BL</mat-option>
+          <mat-option value="BS">BS</mat-option>
+          <mat-option value="FR">FR</mat-option>
+          <mat-option value="GE">GE</mat-option>
+          <mat-option value="GL">GL</mat-option>
+          <mat-option value="GR">GR</mat-option>
+          <mat-option value="JU">JU</mat-option>
+          <mat-option value="LU">LU</mat-option>
+          <mat-option value="NE">NE</mat-option>
+          <mat-option value="NW">NW</mat-option>
+          <mat-option value="OW">OW</mat-option>
+          <mat-option value="SG">SG</mat-option>
+          <mat-option value="SH">SH</mat-option>
+          <mat-option value="SO">SO</mat-option>
+          <mat-option value="SZ">SZ</mat-option>
+          <mat-option value="TG">TG</mat-option>
+          <mat-option value="TI">TI</mat-option>
+          <mat-option value="UR">UR</mat-option>
+          <mat-option value="VD">VD</mat-option>
+          <mat-option value="VS">VS</mat-option>
+          <mat-option value="ZG">ZG</mat-option>
+          <mat-option value="ZH">ZH</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="subparent">
+      <mat-form-field>
+        <mat-label>Email:</mat-label>
+        <input matInput formControlName="email" type="email" required>
+      </mat-form-field>
     </div>
     <div class="subparent">
-      <label for="email">Email:</label>
-      <input type="email" id="email" [(ngModel)]="formData.email" name="email" required>
+      <mat-form-field>
+        <mat-label>Web:</mat-label>
+        <input matInput formControlName="web" required>
+      </mat-form-field>
     </div>
     <div class="subparent">
-      <label for="web">Web:</label>
-      <input type="text" id="web" [(ngModel)]="formData.web" name="web" required>
+      <mat-form-field>
+        <mat-label>Phone:</mat-label>
+        <input matInput formControlName="phone" required>
+      </mat-form-field>
     </div>
     <div class="subparent">
-      <label for="phone">Phone:</label>
-      <input type="text" id="phone" [(ngModel)]="formData.phone" name="phone" required>
+      <mat-form-field>
+        <mat-label>Contact:</mat-label>
+        <input matInput formControlName="contact" required>
+      </mat-form-field>
     </div>
     <div class="subparent">
-      <label for="contact">Contact:</label>
-      <input type="text" id="contact" [(ngModel)]="formData.contact" name="contact" required>
-    </div>
-    <div class="subparent">
-      <label for="img">Image URL:</label>
-      <input type="text" id="img" [(ngModel)]="formData.img" name="img" required>
+      <mat-form-field>
+        <mat-label>Image URL:</mat-label>
+        <input matInput formControlName="img" required>
+      </mat-form-field>
     </div>
     <div class="location">
       <div class="lat">
-        <label for="lat">Koordinaten</label>
-        <input placeholder="Breitengrad" class="locinputlng" type="number" id="lat" [(ngModel)]="formData.lat"
-          name="lat" required>
+        <mat-form-field>
+          <mat-label>Breitengrad</mat-label>
+          <input matInput placeholder="Format: 00,000" formControlName="lat" type="number" required>
+        </mat-form-field>
       </div>
       <div class="lng">
-        <input placeholder="Längengrad" class="locinputlat" type="number" id="lng" [(ngModel)]="formData.lng" name="lng"
-          required>
+        <mat-form-field>
+          <mat-label>Längengrad</mat-label>
+          <input matInput placeholder="Format: 00,000" formControlName="lng" type="number" required>
+        </mat-form-field>
       </div>
     </div>
   </div>
+
   <div class="btnparent">
-    <button type="submit">speichern</button>
-    <a [routerLink]="['/filialen/materialtable']" class="back-btn">Zurück</a>
+    <button class="mat-button" color="primary" type="submit">speichern</button>
+    <a class="back-btn" [routerLink]="['/filialen']">Zurück</a>
   </div>
 </form>
