@@ -1,18 +1,19 @@
 <div class="company-details" *ngIf="company">
-    <div class="info">
-        <h3>Unsere Firma in {{ company.ort }}</h3>
-        <p>{{ company.firma }}<br>Superstraße 23<br>{{ company.plz }} {{ company.ort }}</p>
-        <p>Telefon: {{company.phone}}<br> E-Mail: {{company.email}}<br>Web: {{company.web}}</p>
-        <p>{{company.contact}}</p>
-    </div>
-    <div>
-        <img class="img" src="{{ company.img }}" alt="Bild von {{company.firma}}">
-    </div>
+  <div class="info">
+    <h3>Unsere Firma in {{ company.ort }}</h3>
+    <p>{{ company.firma }}<br>Superstraße 23<br>{{ company.plz }} {{ company.ort }}</p>
+    <p>Telefon: {{company.phone}}<br> E-Mail: {{company.email}}<br>Web: {{company.web}}</p>
+    <p>{{company.contact}}</p>
+  </div>
+  <div>
+    <img class="img" src="{{ company.img }}" alt="Bild von {{company.firma}}">
+  </div>
 </div>
+
 <div class="map-parent">
   <google-map [options]="options" [center]="center" [zoom]="zoom" class="custom-map" width="60%" height="30rem">
-    <map-marker *ngFor="let position of markerPositions" [position]="position"></map-marker>
+    <map-marker [position]="markerPosition"></map-marker>
   </google-map>
 </div>
 
-<button class="back-btn" (click)="goBack()">&lt; Zurück zur Übersicht</button>
+<a [routerLink]="['/filialen/materialtable']" class="back-btn">&lt; Zurück zur Liste</a>

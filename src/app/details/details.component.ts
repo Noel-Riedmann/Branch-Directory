@@ -11,6 +11,7 @@ import { CompanyService } from '../company.service';
 export class DetailsComponent implements OnInit {
   companyId: number | undefined;
   company: Company | undefined;
+  markerPosition: google.maps.LatLngLiteral = { lat: 0, lng: 0 };
   lat: number = 47.307;
   lng: number = 9.69;
 
@@ -20,14 +21,9 @@ export class DetailsComponent implements OnInit {
     const idParam = this.route.snapshot.paramMap.get('id');
     if (idParam) {
       this.companyId = +idParam;
-      const selectedCompany = localStorage.getItem('selectedCompany');
-      if (selectedCompany) {
-        this.company = JSON.parse(selectedCompany);
-      } else {
-        this.company = this.companyService.getSelectedCompany();
-      }
+      this.company = this.companyService.getCompanyById(this.companyId);
       if (this.company) {
-        this.markerPositions = [{ lat: this.company.lat, lng: this.company.lng }];
+        this.markerPosition = { lat: this.company.lat, lng: this.company.lng };
       }
     } else {
       console.log('Branch not available');
@@ -35,20 +31,11 @@ export class DetailsComponent implements OnInit {
     }
   }
 
-  goBack() {
-    this.router.navigate(['/filialen/materialtable']);
-  }
-
   center: google.maps.LatLngLiteral = { lat: 47.34892767158731, lng: 9.888965735153159 }; // Center position of the map
   zoom = 10; // Zoom level of the map
-  markerPositions: google.maps.LatLngLiteral[] = [{ lat: this.lat, lng: this.lng }];
   options: google.maps.MapOptions = {
     disableDoubleClickZoom: true,
     minZoom: 2.8,
     //reference https://timdeschryver.dev/blog/google-maps-as-an-angular-component#googlemap
   };
-
 }
-
-
-

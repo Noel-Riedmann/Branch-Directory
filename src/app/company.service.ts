@@ -37,14 +37,6 @@ export class CompanyService {
     this.saveCompaniesToStorage();
   }
 
-  setSelectedCompany(company: Company): void {
-    this.selectedCompany = company;
-  }
-
-  getSelectedCompany(): Company | undefined {
-    return this.selectedCompany;
-  }
-
   private saveCompaniesToStorage(): void {
     localStorage.setItem(this.storageKey, JSON.stringify(this.companies));
   }

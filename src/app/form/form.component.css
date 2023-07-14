@@ -48,10 +48,10 @@ h2 {
     display: flex;
 }
 
-button {
+button,a {
     margin-top: 1rem;
-    width: 5.75rem;
-    height: 2rem;
+    width: auto;
+    height: auto;
     border-radius: 4px;
     padding-left: 12px;
     font-size: 14px;
@@ -62,9 +62,10 @@ button {
     color: rgb(33, 49, 60);
     background-color: rgb(255, 255, 255);
     padding-right: 12px;
+    text-decoration: none;
 }
 
-button:hover {
+button:hover, a:hover {
     box-shadow: rgb(231 238 236) 0px 0px 0px 3px;
     background-color: rgb(207 207 207);
 }

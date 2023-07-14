@@ -12,6 +12,8 @@
     font-weight: bold;
     cursor:pointer;
     margin: 2rem;
+    text-decoration: none;
+    color: black;
 }
 
 .img{

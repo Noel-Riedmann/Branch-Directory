@@ -63,6 +63,7 @@ td {
   border: none;
   cursor: pointer;
   outline: none;
+  text-decoration: none;
 }
 
 /*Add branche button*/
@@ -83,6 +84,7 @@ td {
   background-color: #0000000d;
   color: #0e0e10;
   padding: 0 20px;
+  text-decoration: none;
 }
 
 .addbtn:hover {
@@ -104,6 +106,8 @@ td {
   background-color: #0000000d;
   color: #0e0e10;
   padding: 0 20px;
+  text-decoration: none;
+
 }
 
 .editbtn:hover {
@@ -137,4 +141,11 @@ td {
 
 .delete{
   width: 5%;
+}
+
+
+.editbtn,
+.deletebtn,
+.addbtn {
+  line-height: 30px;
 }

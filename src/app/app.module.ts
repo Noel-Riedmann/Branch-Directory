@@ -9,7 +9,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { FormComponent } from './form/form.component'
 import { FormsModule } from '@angular/forms';
-import { EditCompanyComponent } from './edit-company-component/edit-company-component.component';
 import { MaterialtableComponent } from './materialtable/materialtable.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
@@ -27,7 +26,6 @@ import { MapComponent } from './map/map.component';
     CompanyListComponent,
     DetailsComponent,
     FormComponent,
-    EditCompanyComponent,
     MaterialtableComponent,
     MapComponent
   ],

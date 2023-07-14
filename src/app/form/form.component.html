@@ -1,5 +1,6 @@
 <h2>Filiale hinzufügen</h2>
 <form (submit)="onSubmit()">
+  <input type="hidden" id="id" [(ngModel)]="formData.id" name="id">
   <div class="parent">
     <div class="subparent">
       <label for="sortiment">Sortiment:</label>
@@ -44,15 +45,17 @@
     <div class="location">
       <div class="lat">
         <label for="lat">Koordinaten</label>
-        <input placeholder="Breitengrad" class="locinputlng" type="number" id="lat" [(ngModel)]="formData.lat" name="lat" required>
+        <input placeholder="Breitengrad" class="locinputlng" type="number" id="lat" [(ngModel)]="formData.lat"
+          name="lat" required>
       </div>
       <div class="lng">
-        <input placeholder="Längengrad" class="locinputlat" type="number" id="lng" [(ngModel)]="formData.lng" name="lng" required>
+        <input placeholder="Längengrad" class="locinputlat" type="number" id="lng" [(ngModel)]="formData.lng" name="lng"
+          required>
       </div>
     </div>
   </div>
   <div class="btnparent">
     <button type="submit">speichern</button>
-    <button type="button" (click)="back()">zurück</button>
+    <a [routerLink]="['/filialen/materialtable']" class="back-btn">Zurück</a>
   </div>
 </form>

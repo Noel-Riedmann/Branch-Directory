@@ -1,37 +1,39 @@
-<div  class="body">
-    <h2>Unsere Filialen</h2>
-    <p>Hier kann man Filialen bearbeiten, löschen und hinzufügen.</p>
-  </div>
-  <button class="addbtn" (click)="addBranche()">Filiale hinzufügen</button>
+<div class="body">
+  <h2>Unsere Filialen</h2>
+  <p>Hier kann man Filialen bearbeiten, löschen und hinzufügen.</p>
+</div>
 
-  <table>
-    <thead class="listheaderparent">
-      <tr class="tr">
-              <th class="srt">Sortiment</th>
-              <th class="fir">Firma</th>
-              <th class="plz">PLZ</th>
-              <th class="ort">Ort</th>
-              <th class="kan">Kanton</th>
-              <th class="details">Details</th>
+<a class="addbtn" routerLink="/filialen/add">Filiale hinzufügen</a>
 
-          </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let company of companies">
-        <td class="srt">{{ company.sortiment }}</td>
-              <td class="fir">{{ company.firma }}</td>
-              <td class="plz">{{ company.plz }}</td>
-              <td class="ort">{{ company.ort }}</td>
-              <td class="kan">{{ company.kanton }}</td>
-        <td class="details">
-          <button class="detailbtn" (click)="showDetails(company)">Details anzeigen</button>
-        </td>
-        <td class="edit">
-          <button class="editbtn" (click)="editCompany(company)">Bearbeiten</button>
-        </td>
-        <td class="delete">
-          <button class="deletebtn" (click)="deleteCompany(company)">Löschen</button>
-        </td>
-              </tr>
-    </tbody>
-  </table>
+<table>
+  <thead class="listheaderparent">
+    <tr class="tr">
+      <th class="srt">Sortiment</th>
+      <th class="fir">Firma</th>
+      <th class="plz">PLZ</th>
+      <th class="ort">Ort</th>
+      <th class="kan">Kanton</th>
+      <th class="details">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let company of companies">
+      <td class="srt">{{ company.sortiment }}</td>
+      <td class="fir">{{ company.firma }}</td>
+      <td class="plz">{{ company.plz }}</td>
+      <td class="ort">{{ company.ort }}</td>
+      <td class="kan">{{ company.kanton }}</td>
+      <td class="details">
+        <a class="detailbtn" [routerLink]="['/filialen/details', company.id]">Details anzeigen</a>
+      </td>
+      <td class="edit">
+        <a class="editbtn" [routerLink]="['/filialen/edit', company.id]">Bearbeiten</a>
+      </td>
+      <td class="delete">
+        <a class="deletebtn" (click)="deleteCompany(company)">Löschen</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+

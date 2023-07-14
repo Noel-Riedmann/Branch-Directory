@@ -17,26 +17,7 @@ export class CompanyListComponent implements OnInit {
     this.companies = this.companyService.getCompanies();
   }
 
-  showDetails(company: Company) {
-    this.companyService.setSelectedCompany(company);
-    localStorage.setItem('selectedCompany', JSON.stringify(company));
-    this.router.navigate(['filialen/details', company.id]);
-  }
-
-  addBranche() {
-    this.router.navigate(['filialen/add']);
-  }
-
-  editCompany(company: Company) {
-    this.companyService.setSelectedCompany(company);
-    this.router.navigate(['filialen/edit', company.id]); 
-    console.log("Company id:", company.id)
-  }
-
   deleteCompany(company: Company){
-    this.companyService.setSelectedCompany(company);
     this.companyService.deleteCompany(company.id);
   }
-  
-  
 }
