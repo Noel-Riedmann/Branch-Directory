@@ -1,10 +1,10 @@
 .body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   padding: 10px;
 }
 
 table {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   width: 100%;
   border-collapse: collapse;
   border-color: black;
@@ -55,7 +55,7 @@ td {
 
 /* Button incl. animation */
 .detailbtn {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   display: inline-block;
   position: relative;
   color: black;
@@ -114,7 +114,7 @@ td {
   background-color: #0000001a;
 }
 
-.deletebtn{
+.deletebtn {
   right: 0px;
   margin-top: .1rem;
   margin-bottom: .5rem;
@@ -131,15 +131,15 @@ td {
   padding: 0 20px;
 }
 
-.deletebtn:hover{
-    background-color: #0000001a;
+.deletebtn:hover {
+  background-color: #0000001a;
 }
 
-.edit{
+.edit {
   width: 5%;
 }
 
-.delete{
+.delete {
   width: 5%;
 }
 

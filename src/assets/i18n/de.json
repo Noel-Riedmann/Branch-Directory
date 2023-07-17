@@ -1,7 +1,7 @@
 {
   "ZIP": "PLZ",
   "ASSORTMENT": "Sortiment",
-  "BRANCHE": "Filiale",
+  "BRANCH": "Filiale",
   "BRANCHES": "Filialen",
   "CITY": "Ort",
   "CANTON": "Kanton",
@@ -23,12 +23,13 @@
   "BACK_TO_LIST": "Zurück zur Liste",
   "EDIT": "Bearbeiten",
   "DELETE": "Löschen",
-  "ADD_BRANCHE": "Filiale hinzufügen",
+  "ADD_BRANCH": "Filiale hinzufügen",
   "CONTACT": "Kontakt",
   "IMAGE_URL": "Bildadresse",
   "LATITUDE": "Breitengrad",
   "LONGITUDE": "Längengrad",
   "SAVE": "Speichern",
   "BACK": "Zurück",
-  "FORMAT": "Format"
+  "FORMAT": "Format",
+  "EDIT_BRANCH": "Filiale bearbeiten"
 }

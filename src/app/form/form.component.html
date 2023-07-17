@@ -1,4 +1,4 @@
-<h2>{{ 'ADD_BRANCHE' | translate }}</h2>
+<h2>{{ form.value.id ? ('EDIT_BRANCH' | translate) : ('ADD_BRANCH' | translate) }}</h2>
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <input type="hidden" formControlName="id">
@@ -12,7 +12,7 @@
     </div>
     <div class="subparent">
       <mat-form-field>
-        <mat-label>{{ 'BRANCHE' | translate }}</mat-label>
+        <mat-label>{{ 'BRANCH' | translate }}</mat-label>
         <input matInput formControlName="branche" required>
       </mat-form-field>
     </div>

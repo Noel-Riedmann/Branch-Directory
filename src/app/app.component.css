@@ -1,52 +1,52 @@
 .header {
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    flex-direction: column;
-    border-bottom-style: solid;
-    border-color: black;
-    align-content: center;
-    justify-content: center;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  border-bottom-style: solid;
+  border-color: black;
+  align-content: center;
+  justify-content: center;
 }
 
 .navigation {
-    align-self: flex-end;
-    justify-self: baseline;
-    position: absolute;
-    
+  align-self: flex-end;
+  justify-self: baseline;
+  position: absolute;
+
 
 }
 
 .logo {
-    width: 10rem;
+  width: 10rem;
 }
 
 .navitems {
-    display: inline-block;
-    position: relative;
-    color: #0087ca;
-    background: none;
-    color: inherit;
-    border: none;
-    padding-left: 10px;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  background: none;
+  color: inherit;
+  border: none;
+  padding-left: 10px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .navitems::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 
 .navitems:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
