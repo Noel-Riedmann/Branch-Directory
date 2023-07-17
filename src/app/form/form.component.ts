@@ -19,11 +19,11 @@ export class FormComponent implements OnInit {
   ) {
     this.form = this.formBuilder.group({
       id: [''],
-      sortiment: ['', Validators.required],
-      firma: ['', Validators.required],
-      plz: ['', Validators.required],
-      ort: ['', Validators.required],
-      kanton: ['', Validators.required],
+      assortment: ['', Validators.required],
+      branche: ['', Validators.required],
+      zip: ['', Validators.required],
+      city: ['', Validators.required],
+      canton: ['', Validators.required],
       email: ['', Validators.required],
       web: ['', Validators.required],
       phone: ['', Validators.required],

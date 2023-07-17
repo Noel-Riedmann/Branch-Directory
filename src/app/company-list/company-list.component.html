@@ -1,39 +1,37 @@
 <div class="body">
-  <h2>Unsere Filialen</h2>
-  <p>Hier kann man Filialen bearbeiten, löschen und hinzufügen.</p>
+  <h2>{{ 'OUR_BRANCHES' | translate }}</h2>
+  <p>{{ 'HERE_YOU_CAN_ADD,_EDIT_OR_DELETE_BRANCHES' | translate }}</p>
 </div>
 
-<a class="addbtn" routerLink="/filialen/add">Filiale hinzufügen</a>
+<a class="addbtn" routerLink="/filialen/add">{{ 'ADD_BRANCHE' | translate }}</a>
 
 <table>
   <thead class="listheaderparent">
     <tr class="tr">
-      <th class="srt">Sortiment</th>
-      <th class="fir">Firma</th>
-      <th class="plz">PLZ</th>
-      <th class="ort">Ort</th>
-      <th class="kan">Kanton</th>
-      <th class="details">Details</th>
+      <th class="srt">{{ 'ASSORTMENT' | translate | uppercase}}</th>
+      <th class="fir">{{ 'BRANCHE' | translate | uppercase}}</th>
+      <th class="plz">{{ 'ZIP' | translate | uppercase}}</th>
+      <th class="ort">{{ 'CITY' | translate | uppercase}}</th>
+      <th class="kan">{{ 'CANTON' | translate | uppercase}}</th>
+      <th class="details">{{ 'SHOW_DETAILS' | translate | uppercase}}</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let company of companies">
-      <td class="srt">{{ company.sortiment }}</td>
-      <td class="fir">{{ company.firma }}</td>
-      <td class="plz">{{ company.plz }}</td>
-      <td class="ort">{{ company.ort }}</td>
-      <td class="kan">{{ company.kanton }}</td>
+      <td class="srt">{{ company.assortment }}</td>
+      <td class="fir">{{ company.branche }}</td>
+      <td class="plz">{{ company.zip }}</td>
+      <td class="ort">{{ company.city }}</td>
+      <td class="kan">{{ company.canton }}</td>
       <td class="details">
-        <a class="detailbtn" [routerLink]="['/filialen/details', company.id]">Details anzeigen</a>
+        <a class="detailbtn" [routerLink]="['/filialen/details', company.id]">{{ 'SHOW_DETAILS' | translate }}</a>
       </td>
       <td class="edit">
-        <a class="editbtn" [routerLink]="['/filialen/edit', company.id]">Bearbeiten</a>
+        <a class="editbtn" [routerLink]="['/filialen/edit', company.id]">{{ 'EDIT' | translate }}</a>
       </td>
       <td class="delete">
-        <a class="deletebtn" (click)="deleteCompany(company)">Löschen</a>
+        <a class="deletebtn" (click)="deleteCompany(company)">{{ 'DELETE' | translate }}</a>
       </td>
     </tr>
   </tbody>
 </table>
-
-

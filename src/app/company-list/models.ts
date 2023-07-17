@@ -1,10 +1,10 @@
 export interface Company {
     id: number;
-    sortiment: string;
-    firma: string;
-    plz: string;
-    ort: string;
-    kanton: string;
+    assortment: string;
+    branche: string;
+    zip: string;
+    city: string;
+    canton: string;
     email: string;
     phone: string;
     web: string;

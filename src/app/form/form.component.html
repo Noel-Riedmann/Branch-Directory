@@ -1,4 +1,4 @@
-<h2>Filiale hinzufügen</h2>
+<h2>{{ 'ADD_BRANCHE' | translate }}</h2>
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <input type="hidden" formControlName="id">
@@ -6,32 +6,32 @@
   <div class="parent">
     <div class="subparent">
       <mat-form-field>
-        <mat-label>Sortiment:</mat-label>
-        <input matInput formControlName="sortiment" required>
+        <mat-label>{{ 'ASSORTMENT' | translate }}</mat-label>
+        <input matInput formControlName="assortment" required>
       </mat-form-field>
     </div>
     <div class="subparent">
       <mat-form-field>
-        <mat-label>Firma:</mat-label>
-        <input matInput formControlName="firma" required>
+        <mat-label>{{ 'BRANCHE' | translate }}</mat-label>
+        <input matInput formControlName="branche" required>
       </mat-form-field>
     </div>
     <div class="subparent">
       <mat-form-field>
-        <mat-label>PLZ:</mat-label>
-        <input matInput formControlName="plz" required>
+        <mat-label>{{ 'ZIP' | translate }}</mat-label>
+        <input matInput formControlName="zip" required>
       </mat-form-field>
     </div>
     <div class="subparent">
       <mat-form-field>
-        <mat-label>Ort:</mat-label>
-        <input matInput formControlName="ort" required>
+        <mat-label>{{ 'CITY' | translate }}</mat-label>
+        <input matInput formControlName="city" required>
       </mat-form-field>
     </div>
     <div class="subparent">
       <mat-form-field>
-        <mat-label>Kanton:</mat-label>
-        <mat-select formControlName="kanton" required>
+        <mat-label>{{ 'CANTON' | translate }}</mat-label>
+        <mat-select formControlName="canton" required>
           <mat-option value="VB (AT)">VB (AT)</mat-option>
           <mat-option value="AG">AG</mat-option>
           <mat-option value="AI">AI</mat-option>
@@ -65,52 +65,52 @@
 
     <div class="subparent">
       <mat-form-field>
-        <mat-label>Email:</mat-label>
+        <mat-label>{{ 'EMAIL' | translate }}</mat-label>
         <input matInput formControlName="email" type="email" required>
       </mat-form-field>
     </div>
     <div class="subparent">
       <mat-form-field>
-        <mat-label>Web:</mat-label>
+        <mat-label>{{ 'WEB' | translate }}</mat-label>
         <input matInput formControlName="web" required>
       </mat-form-field>
     </div>
     <div class="subparent">
       <mat-form-field>
-        <mat-label>Phone:</mat-label>
+        <mat-label>{{ 'PHONE' | translate }}</mat-label>
         <input matInput formControlName="phone" required>
       </mat-form-field>
     </div>
     <div class="subparent">
       <mat-form-field>
-        <mat-label>Contact:</mat-label>
+        <mat-label>{{ 'CONTACT' | translate }}</mat-label>
         <input matInput formControlName="contact" required>
       </mat-form-field>
     </div>
     <div class="subparent">
       <mat-form-field>
-        <mat-label>Image URL:</mat-label>
+        <mat-label>{{ 'IMAGE_URL' | translate }}</mat-label>
         <input matInput formControlName="img" required>
       </mat-form-field>
     </div>
     <div class="location">
       <div class="lat">
         <mat-form-field>
-          <mat-label>Breitengrad</mat-label>
-          <input matInput placeholder="Format: 00,000" formControlName="lat" type="number" required>
+          <mat-label>{{ 'LATITUDE' | translate }}</mat-label>
+          <input matInput placeholder="{{ 'FORMAT' | translate }}: 00,000" formControlName="lat" type="number" required>
         </mat-form-field>
       </div>
       <div class="lng">
         <mat-form-field>
-          <mat-label>Längengrad</mat-label>
-          <input matInput placeholder="Format: 00,000" formControlName="lng" type="number" required>
+          <mat-label>{{ 'LONGITUDE' | translate }}</mat-label>
+          <input matInput placeholder="{{ 'FORMAT' | translate }}: 00,000" formControlName="lng" type="number" required>
         </mat-form-field>
       </div>
     </div>
   </div>
 
   <div class="btnparent">
-    <button class="mat-button" color="primary" type="submit">speichern</button>
-    <a class="back-btn" [routerLink]="['/filialen']">Zurück</a>
+    <button class="mat-button" color="primary" type="submit">{{ 'SAVE' | translate }}</button>
+    <a class="back-btn" [routerLink]="['/filialen']">{{ 'BACK' | translate }}</a>
   </div>
 </form>

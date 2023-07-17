@@ -1,14 +1,15 @@
 <div class="company-details" *ngIf="company">
   <div class="info">
-    <h3>Unsere Firma in {{ company.ort }}</h3>
-    <p>{{ company.firma }}<br>Superstraße 23<br>{{ company.plz }} {{ company.ort }}</p>
-    <p>Telefon: {{company.phone}}<br> E-Mail: {{company.email}}<br>Web: {{company.web}}</p>
-    <p>{{company.contact}}</p>
+    <h3>{{ 'OUR_BRANCHES' | translate }} {{ company.city }}</h3>
+    <p>{{ company.branche }}{{ company.zip }} {{ company.city }}</p>
+    <p>{{ 'PHONE' | translate }}: {{ company.phone }}<br> {{ 'EMAIL' | translate }}: {{ company.email }}<br>{{ 'WEB' | translate }}: {{ company.web }}</p>
+    <p>{{ company.contact }}</p>
   </div>
   <div>
-    <img class="img" src="{{ company.img }}" alt="Bild von {{company.firma}}">
+    <img class="img" src="{{ company.img }}" alt="Image by {{ company.branche }}">
   </div>
 </div>
+
 
 <div class="map-parent">
   <google-map [options]="options" [center]="center" [zoom]="zoom" class="custom-map" width="60%" height="30rem">
@@ -16,4 +17,4 @@
   </google-map>
 </div>
 
-<a [routerLink]="['/filialen/materialtable']" class="back-btn">&lt; Zurück zur Liste</a>
+<a [routerLink]="['/filialen/materialtable']" class="back-btn">&lt; {{ 'BACK_TO_LIST' | translate }}</a>

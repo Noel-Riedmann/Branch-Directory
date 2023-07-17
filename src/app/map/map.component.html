@@ -1,10 +1,11 @@
-<h2>Unsere Filialen</h2>
-<p>Hier kommt etwas Text... unsere Produkte gibt es natürlich auch im Fachhandel. Hier finden Sie Verkaufsstellen in Ihrer Nähe.</p>
+<h2>{{ 'OUR_BRANCHES' | translate }}</h2>
+<p>{{ 'HERE_YOU_CAN_ADD,_EDIT_OR_DELETE_BRANCHES' | translate }}.</p>
 
 <mat-button-toggle-group name="displaymode" class="displaybtngroup">
-  <mat-button-toggle value="table" class="displaybtn" routerLinkActive="active-link" [routerLink]="'/filialen/materialtable'">Tabelle</mat-button-toggle>
-  <mat-button-toggle value="map" class="displaybtn" routerLinkActive="active-link" [routerLink]="'/filialen/map'">Map</mat-button-toggle>
+  <mat-button-toggle value="table" class="displaybtn" routerLinkActive="active-link" [routerLink]="'/filialen/materialtable'">{{ 'TABLE' | translate }}</mat-button-toggle>
+  <mat-button-toggle value="map" class="displaybtn" routerLinkActive="active-link" [routerLink]="'/filialen/map'">{{ 'MAP' | translate }}</mat-button-toggle>
 </mat-button-toggle-group>
+
 <div class="map-parent">
   <google-map [options]="options" [center]="center" [zoom]="zoom" class="custom-map" width="97%" height="50rem">
     <map-marker *ngFor="let position of markerPositions" [position]="position"></map-marker>
