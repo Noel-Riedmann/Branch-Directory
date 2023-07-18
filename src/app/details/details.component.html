@@ -1,7 +1,7 @@
 <div class="company-details" *ngIf="company">
   <div class="info">
     <h3>{{ 'OUR_BRANCHES' | translate }} {{ company.city }}</h3>
-    <p>{{ company.branche }}{{ company.zip }} {{ company.city }}</p>
+    <p>{{ company.branche }} {{ company.zip }} {{ company.city }}</p>
     <p>{{ 'PHONE' | translate }}: {{ company.phone }}<br> {{ 'EMAIL' | translate }}: {{ company.email }}<br>{{ 'WEB' | translate }}: {{ company.web }}</p>
     <p>{{ company.contact }}</p>
   </div>

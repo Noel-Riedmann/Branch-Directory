@@ -4,6 +4,7 @@
     <button class="navitems">{{ 'START' | translate }}</button>
     <button class="navitems">{{ 'PRODUCTS' | translate }}</button>
     <button class="navitems">{{ 'ABOUT US' | translate }}</button>
+    <button class="navitems" (click)="goToFullstack()">{{ 'FULLSTACKTABLE' | translate }}</button>
     <button class="navitems" (click)="mattable()">{{ 'BRANCHES' | translate }}</button>
     <button class="navitems" (click)="goToFilialen()">{{ 'EDITOR' | translate }}</button>
     <select (change)="changeLanguage($event)" class="navitems">

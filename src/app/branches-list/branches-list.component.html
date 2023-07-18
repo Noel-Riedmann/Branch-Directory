@@ -1,0 +1,28 @@
+<div class="container my-5">
+  <h1 class="mb-3">{{'BRANCHES' |translate}}</h1>
+  <table class="table" *ngIf="branches && branches.length > 0">
+    <thead>
+      <tr class="tr">
+        <th class="srt">{{ 'ASSORTMENT' | translate | uppercase}}</th>
+        <th class="fir">{{ 'BRANCHE' | translate | uppercase}}</th>
+        <th class="plz">{{ 'ZIP' | translate | uppercase}}</th>
+        <th class="ort">{{ 'CITY' | translate | uppercase}}</th>
+        <th class="kan">{{ 'CANTON' | translate | uppercase}}</th>
+        <th class="details">{{ 'SHOW_DETAILS' | translate | uppercase}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let branch of branches">
+        <td class="srt">{{ branch.assortment }}</td>
+        <td class="fir">{{ branch.branche }}</td>
+        <td class="plz">{{ branch.zip }}</td>
+        <td class="ort">{{ branch.city }}</td>
+        <td class="kan">{{ branch.canton }}</td>
+        <td class="details">
+          <a class="detailbtn" [routerLink]="['/filialen/details', branch.id]">{{ 'SHOW_DETAILS' | translate }}</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="!branches || branches.length <= 0">No branches</p>
+</div>

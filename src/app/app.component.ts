@@ -62,4 +62,8 @@ export class AppComponent {
   getCurrentLanguage(): string {
     return this.languageService.getCurrentLanguage();
   }
+
+  goToFullstack(){
+    this.router.navigate(['/filialen/fullstacktable']);
+  }
 }

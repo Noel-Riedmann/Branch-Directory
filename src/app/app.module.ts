@@ -23,6 +23,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import { FullStackTableComponent } from './full-stack-table/full-stack-table.component';
+import { BranchesListComponent } from './branches-list/branches-list.component';
+import { AddBranchComponent } from './add-branch/add-branch.component';
 
 
 
@@ -40,7 +43,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     DetailsComponent,
     FormComponent,
     MaterialtableComponent,
-    MapComponent
+    MapComponent,
+    FullStackTableComponent,
+    BranchesListComponent,
+    AddBranchComponent
   ],
   imports: [
     BrowserModule,
