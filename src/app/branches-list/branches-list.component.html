@@ -4,11 +4,11 @@
     <thead>
       <tr class="tr">
         <th class="srt">{{ 'ASSORTMENT' | translate | uppercase}}</th>
-        <th class="fir">{{ 'BRANCHE' | translate | uppercase}}</th>
+        <th class="fir">{{ 'BRANCH' | translate | uppercase}}</th>
         <th class="plz">{{ 'ZIP' | translate | uppercase}}</th>
         <th class="ort">{{ 'CITY' | translate | uppercase}}</th>
         <th class="kan">{{ 'CANTON' | translate | uppercase}}</th>
-        <th class="details">{{ 'SHOW_DETAILS' | translate | uppercase}}</th>
+        <th class="details"></th>
       </tr>
     </thead>
     <tbody>
@@ -19,7 +19,7 @@
         <td class="ort">{{ branch.city }}</td>
         <td class="kan">{{ branch.canton }}</td>
         <td class="details">
-          <a class="detailbtn" [routerLink]="['/filialen/details', branch.id]">{{ 'SHOW_DETAILS' | translate }}</a>
+          <a class="detailbtn" [routerLink]="['/filialen/fullstacktable/edit', branch.id]">{{ 'EDIT_BRANCH' | translate }}</a>
         </td>
       </tr>
     </tbody>

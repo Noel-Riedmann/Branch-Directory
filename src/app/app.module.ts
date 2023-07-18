@@ -26,6 +26,7 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import { FullStackTableComponent } from './full-stack-table/full-stack-table.component';
 import { BranchesListComponent } from './branches-list/branches-list.component';
 import { AddBranchComponent } from './add-branch/add-branch.component';
+import { EditBranchComponent } from './edit-branch/edit-branch.component';
 
 
 
@@ -46,7 +47,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MapComponent,
     FullStackTableComponent,
     BranchesListComponent,
-    AddBranchComponent
+    AddBranchComponent,
+    EditBranchComponent
   ],
   imports: [
     BrowserModule,

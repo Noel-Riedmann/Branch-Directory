@@ -8,6 +8,7 @@ import { MapComponent } from './map/map.component';
 import { FullStackTableComponent } from './full-stack-table/full-stack-table.component';
 import { BranchesListComponent } from './branches-list/branches-list.component';
 import { AddBranchComponent } from './add-branch/add-branch.component';
+import { EditBranchComponent } from './edit-branch/edit-branch.component';
 
 const routes: Routes = [
   { path: 'filialen', component: CompanyListComponent },
@@ -21,10 +22,12 @@ const routes: Routes = [
     path: 'filialen/fullstacktable',
     component: FullStackTableComponent,
     children: [
+      { path: '', redirectTo: 'branches', pathMatch: 'full' },
       { path: 'branches', component: BranchesListComponent },
-      { path: 'add', component: AddBranchComponent }
+      { path: 'add', component: AddBranchComponent },
+      { path: 'edit/:id', component: EditBranchComponent}
     ]
-  }
+  },
 ];
 
 @NgModule({

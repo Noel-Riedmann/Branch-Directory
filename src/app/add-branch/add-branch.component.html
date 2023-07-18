@@ -20,8 +20,35 @@
           <input type="text" class="form-control" id="city" [(ngModel)] = "addBranchRequest.city" name="city">
         </div>
         <div class="mb-3">
-          <label for="canton" class="form-label">{{'CANTON' |translate}}</label>
-          <input type="text" class="form-control" id="canton" [(ngModel)] = "addBranchRequest.canton" name="canton">
+          <select class="form-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="AG">AG</option>
+            <option value="AI">AI</option>
+            <option value="AR">AR</option>
+            <option value="BE">BE</option>
+            <option value="BL">BL</option>
+            <option value="BS">BS</option>
+            <option value="FR">FR</option>
+            <option value="GE">GE</option>
+            <option value="GL">GL</option>
+            <option value="GR">GR</option>
+            <option value="JU">JU</option>
+            <option value="LU">LU</option>
+            <option value="NE">NE</option>
+            <option value="NW">NW</option>
+            <option value="OW">OW</option>
+            <option value="SG">SG</option>
+            <option value="SH">SH</option>
+            <option value="SO">SO</option>
+            <option value="SZ">SZ</option>
+            <option value="TG">TG</option>
+            <option value="TI">TI</option>
+            <option value="UR">UR</option>
+            <option value="VD">VD</option>
+            <option value="VS">VS</option>
+            <option value="ZG">ZG</option>
+            <option value="ZH">ZH</option>
+          </select>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">{{'EMAIL' |translate}}</label>

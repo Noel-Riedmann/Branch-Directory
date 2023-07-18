@@ -18,4 +18,13 @@ export class BranchesService {
     addBranchRequest.id = '00000000-0000-0000-0000-000000000000';
     return this.http.post<Branch>(this.baseApiUrl + '/api/branches', addBranchRequest);
   }
+
+ getBranch(id: string): Observable<Branch> {
+  return this.http.get<Branch>(`${this.baseApiUrl}/api/branches/${id}`);
+}
+
+updateBranch(id: string, updateBranchRequest: Branch): Observable<Branch>{
+  return this.http.put<Branch>(`${this.baseApiUrl}/api/branches/${id}`, updateBranchRequest);
+}
+
 }
