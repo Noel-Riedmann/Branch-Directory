@@ -1,0 +1,13 @@
+<mat-button-toggle-group name="displaymode" class="displaybtngroup">
+  <mat-button-toggle value="table" class="displaybtn" routerLinkActive="active-link"
+    [routerLink]="'/filialen/fullstacktable/branches'">{{ 'TABLE' | translate }}</mat-button-toggle>
+  <mat-button-toggle value="map" class="displaybtn" routerLinkActive="active-link"
+    [routerLink]="'/filialen/fullstacktable/map'">{{ 'MAP' | translate }}</mat-button-toggle>
+</mat-button-toggle-group>
+<h2>{{ 'OUR_BRANCHES' | translate }}</h2>
+<p>{{ 'HERE_YOU_CAN_SEE_THE_LOCATION_OF_ALL_OUR_BRANCHES' | translate }}.</p>
+<div class="map-parent">
+  <google-map [options]="options" [center]="center" [zoom]="zoom" class="custom-map" width="100%" height="35rem">
+    <map-marker *ngFor="let position of markerPositions" [position]="position"></map-marker>
+  </google-map>
+</div>

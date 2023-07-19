@@ -1,8 +1,3 @@
-.detailbtn{
-  text-decoration: none;
-  color: black;
-}
-
 .displaybtngroup {
   right: 1rem;
   position: absolute;
@@ -17,3 +12,18 @@
   background-color: #e0e0e0;
 }
 
+.map-parent{
+  margin-left: 15%;
+  margin-top: 5rem;
+  width: 70%;
+  padding-bottom: 5rem;
+}
+
+h2,
+p {
+  margin-left: 15%;
+}
+
+h2{
+  margin-top: 1.5%;
+}

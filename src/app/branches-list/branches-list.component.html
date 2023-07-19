@@ -1,4 +1,8 @@
 <div class="container my-5">
+  <mat-button-toggle-group name="displaymode" class="displaybtngroup">
+    <mat-button-toggle value="table" class="displaybtn" routerLinkActive="active-link" [routerLink]="'/filialen/fullstacktable/branches'">{{ 'TABLE' | translate }}</mat-button-toggle>
+    <mat-button-toggle value="map" class="displaybtn" routerLinkActive="active-link" [routerLink]="'/filialen/fullstacktable/map'">{{ 'MAP' | translate }}</mat-button-toggle>
+  </mat-button-toggle-group>
   <h1 class="mb-3">{{'BRANCHES' |translate}}</h1>
   <table class="table" *ngIf="branches && branches.length > 0">
     <thead>

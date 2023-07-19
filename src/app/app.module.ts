@@ -27,6 +27,7 @@ import { FullStackTableComponent } from './full-stack-table/full-stack-table.com
 import { BranchesListComponent } from './branches-list/branches-list.component';
 import { AddBranchComponent } from './add-branch/add-branch.component';
 import { EditBranchComponent } from './edit-branch/edit-branch.component';
+import { FullStackTableMapComponent } from './full-stack-table-map/full-stack-table-map.component';
 
 
 
@@ -48,7 +49,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FullStackTableComponent,
     BranchesListComponent,
     AddBranchComponent,
-    EditBranchComponent
+    EditBranchComponent,
+    FullStackTableMapComponent
   ],
   imports: [
     BrowserModule,
