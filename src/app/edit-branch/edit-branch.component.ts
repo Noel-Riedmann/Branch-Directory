@@ -50,4 +50,12 @@ export class EditBranchComponent {
       }
     })
   }
+
+  deleteBranch(id: string){
+    this.branchesService.deleteBranch(this.branchDetails.id).subscribe({
+      next: (response) => {
+        this.router.navigate(['/filialen/fullstacktable/branches']);
+      }
+    })
+  }
 }

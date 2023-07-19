@@ -1,3 +1,7 @@
 #id:hover{
   cursor: not-allowed;
 }
+
+#delBtn{
+  margin-left: .75rem;
+}

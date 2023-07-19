@@ -19,12 +19,17 @@ export class BranchesService {
     return this.http.post<Branch>(this.baseApiUrl + '/api/branches', addBranchRequest);
   }
 
- getBranch(id: string): Observable<Branch> {
-  return this.http.get<Branch>(`${this.baseApiUrl}/api/branches/${id}`);
+  getBranch(id: string): Observable<Branch> {
+    return this.http.get<Branch>(`${this.baseApiUrl}/api/branches/${id}`);
+  }
+
+  updateBranch(id: string, updateBranchRequest: Branch): Observable<Branch> {
+    return this.http.put<Branch>(`${this.baseApiUrl}/api/branches/${id}`, updateBranchRequest);
+  }
+
+  deleteBranch(id: string): Observable<Branch> {
+    return this.http.delete<Branch>(`${this.baseApiUrl}/api/branches/${id}`)
+  }
 }
 
-updateBranch(id: string, updateBranchRequest: Branch): Observable<Branch>{
-  return this.http.put<Branch>(`${this.baseApiUrl}/api/branches/${id}`, updateBranchRequest);
-}
 
-}
